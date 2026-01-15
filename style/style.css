@@ -6,3 +6,61 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+/* colors */
+
+.primary-color {
+    background-color: rgba(255, 144, 14, 0.1);
+}
+
+.secondary-color {
+    background-color: #FFF4E7;
+}
+
+.dark-1 {
+   color: #131313; 
+}
+
+.dark-2 {
+    color: #424242;
+}
+
+.dark-3 {
+    color: #727272;
+}
+
+
+/* shared-style */
+
+.display-flex {
+    display: flex;
+}
+
+.navbar, .banner {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* header style */
+
+
+/* nav-style */
+
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    font-size: 2.8rem;
+}
+
+.nav-item {
+    list-style: none;
+     margin-right: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-weight: 500;
+}
