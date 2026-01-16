@@ -29,17 +29,17 @@
 }
 
 .orange {
-    color: #ff900e;
+  color: #ff900e;
 }
 
 /* shared-style */
 
 #B {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #M {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .display-flex {
@@ -63,11 +63,11 @@
 }
 
 main > section {
-    margin-top: 130px;
+  margin-top: 130px;
 }
 
 .section-title {
-    font-size: 2.8rem;
+  font-size: 2.8rem;
 }
 
 /* header style */
@@ -108,78 +108,115 @@ main > section {
 }
 
 .banner-image {
-    width: 100%;
+  width: 100%;
 }
-
 
 /* teams section */
 
 .teams {
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .team-image-container {
-    display: grid;
-    gap: 24px;
-    grid-template-columns: repeat(2,1fr);
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .our-features {
-    margin-left: 130px;
-    max-width: 537px;
+  margin-left: 130px;
+  max-width: 537px;
 }
 
-/* soe facts style */
+/* features section style */
 
+.features {
+  gap: 140px;
+}
+
+#feature-section-title {
+  border-left: 5px solid #ff900e;
+  padding-left: 20px;
+}
+
+.feature-card {
+  padding: 30px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.feature-card,
+.feature-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#experience-badge {
+  padding: 45px 42px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+
+#experience-year {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+/* some facts style */
 
 .facts-container {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .fact-card {
-    border: 1px solid #ff900e;
-    width: 240px;
-    height: 250px;
-    border-radius: 8px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  border: 1px solid #ff900e;
+  width: 240px;
+  height: 250px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .fact-number {
-    font-size: 2.8rem;
-    font-weight: 600;
-    margin-top: 5px;
-    margin-bottom: 10px;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .fact-name {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 .fact-description {
-    max-width: 540px;
+  max-width: 540px;
 }
 
 /* sponsor style */
 
 .sponsor-info {
-    max-width: 540px;
-    margin: 50px auto;
-    text-align: center;
+  max-width: 540px;
+  margin: 50px auto;
+  text-align: center;
 }
 
 .sponsor-companies {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .sponsor-companies img {
-    filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 /* responsive design */
@@ -189,42 +226,55 @@ main > section {
     flex-direction: column;
   }
 
-  
+  .team-image-container,
+  .facts-container,
+  .sponsor-companies {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-  .team-image-container, .facts-container, .sponsor-companies {
-    grid-template-columns: repeat(1,1fr);
-}
-
-.facts-container {
+  .facts-container {
     justify-items: center;
     gap: 24px;
-}
+  }
 
-.our-features {
+  .our-features {
     margin-left: 20px;
-}
+  }
 
-.sponsor-companies {
+  .sponsor-companies {
     justify-items: center;
     gap: 50px;
-}
+  }
 
+  .featured-architect img {
+    width: 100%;
+  }
+
+  #experience-badge {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
 }
 
 /* responsive medium device */
 
-@media screen and (min-width:576px) and (max-width: 992px) {
-    .teams {
-        flex-direction: column;
-    }
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .teams,
+  .features {
+    flex-direction: column;
+  }
+  #experience-badge {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .our-features {
+    margin-left: 50px auto;
+  }
 
-    .our-features {
-        margin-left: 50px auto;
-    }
-
-    .sponsor-companies, .facts-container {
-        grid-template-columns: repeat(2,1fr);
-        gap: 50px;
-        justify-items: center;
-    }
+  .sponsor-companies,
+  .facts-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-items: center;
+  }
 }
